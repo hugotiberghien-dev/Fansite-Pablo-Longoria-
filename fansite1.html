@@ -5,54 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Pablo Longoria - Président de l'Olympique de Marseille">
   <title>Pablo Longoria - OM</title>
-  <link rel="stylesheet" href="css/fansite1.css">
+  <link rel="stylesheet" href="/css/fansite1.css">
 </head>
 <body class="body--pablo">
 
   <!-- HEADER -->
-  <header class="header" role="banner">
-    <div class="header__container">
-      <!-- Logo OM -->
-      <a href="fansite1.html" class="header__logo-link" aria-label="Retour à l'accueil">
-        <img src="Image/logo.png" alt="Logo Olympique de Marseille" class="header__logo">
-      </a>
-      
-      <h1 class="header__title">Fansite OM</h1>
-      
-      <!-- Bouton burger pour mobile -->
-      <button class="nav__toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-navigation">
-        <span class="nav__toggle-icon"></span>
-        <span class="nav__toggle-icon"></span>
-        <span class="nav__toggle-icon"></span>
+  <header>
+    <!-- ============================================
+    Container pour le burger et le titre (mobile)
+    ============================================ -->
+    <div class="header-top">
+      <!-- Bouton burger : visible uniquement sur mobile (< 768px) -->
+      <button class="burger-menu" aria-label="Menu" aria-expanded="false">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
       </button>
 
-      <!-- Navigation -->
-      <nav class="nav" aria-label="Navigation principale" id="main-navigation">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="fansite1.html" class="nav__link nav__link--active" aria-current="page">Pablo</a>
+      <!-- Logo : visible uniquement sur mobile (<768px) -->
+      <a href="/index.html" class="logo-mobile">
+          <img src="/images/logo.png" alt="logo OM">
+      </a>
+      <!-- Titre principal de la page -->
+      <h1>FanPage OM dédiée à Pablo Longoria</h1>
+    </div>
+
+    <!-- ============================================
+    Menu overlay : s'affiche en plein écran sur mobile
+    ============================================ -->
+
+    <div class="menu-overlay">
+      <div class="menu-overlay-inner">
+        <ul class="menu-overlay-nav">
+          <li class="menu-overlay-item">
+            <a href="/fansite1.html" class="menu-overlay-link">
+              <span><div>Accueil</div></span>
+            </a>
           </li>
-          <li class="nav__item">
-            <a href="actualite.html" class="nav__link">Actualité</a>
+          <li class="menu-overlay-item">
+            <a href="/actualite.html" class="menu-overlay-link">
+              <span><div>Actualité</div></span>
+            </a>
           </li>
-          <li class="nav__item">
-            <a href="biographie.html" class="nav__link">Biographie</a>
+          <li class="menu-overlay-item">
+            <a href="/biographie.html" class="menu-overlay-link">
+              <span><div>Biographie</div></span>
+            </a>
           </li>
-          <li class="nav__item">
-            <a href="evenements.html" class="nav__link">Événements</a>
+          <li class="menu-overlay-item">
+            <a href="/evenements.html" class="menu-overlay-link">
+              <span><div>Événements</div></span>
+            </a>
           </li>
-          <li class="nav__item">
-            <a href="chronologie.html" class="nav__link">Chronologie</a>
+          <li class="menu-overlay-item">
+            <a href="/chronologie.html" class="menu-overlay-link">
+              <span><div>Chronologie</div></span>
+            </a>
           </li>
-          <li class="nav__item">
-            <a href="videos.html" class="nav__link">Vidéos</a>
+          <li class="menu-overlay-item">
+            <a href="/videos.html" class="menu-overlay-link">
+              <span><div>Vidéos</div></span>
+            </a>
           </li>
-          <li class="nav__item">
-            <a href="contact.html" class="nav__link">Contact</a>
+          <li class="menu-overlay-item">
+            <a href="/contact.html" class="menu-overlay-link">
+              <span><div>Contact</div></span>
+            </a>
           </li>
         </ul>
-      </nav>
+      </div>
     </div>
+
+    <!-- ============================================
+    Navigation desktop : visible uniquement > 768px
+    ============================================ -->
+    <nav>
+      <!-- Logo OM cliquable -->
+      <a href="/index.html" class="logo">
+        <img src="/images/logo.png" alt="logo OM">
+      </a>
+
+      <!-- Liste des liens de navigation -->
+      <ul>
+        <li><a href="/fansite1.html">Accueil</a></li>
+        <li><a href="/actualite.html">Actualité</a></li>
+        <li><a href="/biographie.html">Biographie</a></li>
+        <li><a href="/evenements.html">Événements</a></li>
+        <li><a href="/chronologie.html">Chronologie</a></li>
+        <li><a href="/videos.html">Vidéos</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- SECTION HERO - Image plein écran avec titre -->
@@ -94,25 +137,59 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer__container">
-      <p class="footer__text">
-        <a href="../index.html" class="footer__link">Retour à l'accueil principal</a>
-      </p>
-      <p class="footer__copyright">Copyright © 2025 - Fansite HUGO</p>
-    </div>
+  <footer>
+    <nav>
+      <!-- Logo OM cliquable -->
+      <a href="/index.html" class="logo-footer">
+        <img src="/images/logo.png" alt="logo OM">
+      </a>
+
+      <!-- Liste des liens de navigation -->
+      <ul>
+        <li><a href="/fansite1.html">Accueil</a></li>
+        <li><a href="/actualite.html">Actualité</a></li>
+        <li><a href="/biographie.html">Biographie</a></li>
+        <li><a href="/evenements.html">Événements</a></li>
+        <li><a href="/chronologie.html">Chronologie</a></li>
+        <li><a href="/videos.html">Vidéos</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </footer>
 
-  <!-- Script pour le menu burger -->
+  <!-- ============================================
+  Script JavaScript pour gérer le menu burger
+  ============================================ -->
   <script>
-    const navToggle = document.querySelector('.nav__toggle');
-    const nav = document.querySelector('.nav');
-    
-    navToggle.addEventListener('click', () => {
-      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', !isOpen);
-      nav.classList.toggle('nav--open');
-    });
+      // Récupération des éléments du DOM
+      const burgerMenu = document.querySelector('.burger-menu');
+      const menuOverlay = document.querySelector('.menu-overlay');
+      const body = document.body;
+
+      // Fonction pour ouvrir/fermer le menu
+      burgerMenu.addEventListener('click', function() {
+          // Toggle (basculer) la classe 'active' sur le burger et l'overlay
+          burgerMenu.classList.toggle('active');
+          menuOverlay.classList.toggle('active');
+          
+          // Empêcher le scroll du body quand le menu est ouvert
+          body.classList.toggle('menu-open');
+          
+          // Accessibilité : mise à jour de l'attribut aria-expanded
+          const isExpanded = burgerMenu.classList.contains('active');
+          burgerMenu.setAttribute('aria-expanded', isExpanded);
+      });
+
+      // Fermer le menu quand on clique sur un lien (optionnel)
+      const menuLinks = document.querySelectorAll('.menu-overlay-link');
+      menuLinks.forEach(link => {
+          link.addEventListener('click', function() {
+              burgerMenu.classList.remove('active');
+              menuOverlay.classList.remove('active');
+              body.classList.remove('menu-open');
+              burgerMenu.setAttribute('aria-expanded', 'false');
+          });
+      });
   </script>
 
 </body>

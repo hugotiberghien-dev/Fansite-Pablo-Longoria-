@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez le fansite dédié à Pablo Longoria - Olympique de Marseille">
+  <meta name="keywords" content="contact, Pablo Longoria, fansite OM, message">
+  <title>Contact - Fansite Pablo Longoria</title>
+  <link rel="stylesheet" href="css/fansite1.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="header__container">
+      <!-- Logo OM -->
+      <a href="fansite1.html" class="header__logo-link" aria-label="Retour à l'accueil">
+        <img src="Image/logo.png" alt="Logo Olympique de Marseille" class="header__logo">
+      </a>
+      
+      <h1 class="header__title">Fansite OM</h1>
+      
+      <!-- Bouton burger pour mobile -->
+      <button class="nav__toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-navigation">
+        <span class="nav__toggle-icon"></span>
+        <span class="nav__toggle-icon"></span>
+        <span class="nav__toggle-icon"></span>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="nav" aria-label="Navigation principale" id="main-navigation">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="fansite1.html" class="nav__link">Pablo</a>
+          </li>
+          <li class="nav__item">
+            <a href="actualite.html" class="nav__link">Actualité</a>
+          </li>
+          <li class="nav__item">
+            <a href="biographie.html" class="nav__link">Biographie</a>
+          </li>
+          <li class="nav__item">
+            <a href="evenements.html" class="nav__link">Événements</a>
+          </li>
+          <li class="nav__item">
+            <a href="chronologie.html" class="nav__link">Chronologie</a>
+          </li>
+          <li class="nav__item">
+            <a href="videos.html" class="nav__link">Vidéos</a>
+          </li>
+          <li class="nav__item">
+            <a href="contact.html" class="nav__link nav__link--active" aria-current="page">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="main" role="main">
+    
+    <!-- Section Intro -->
+    <section class="intro">
+      <h2 class="intro__title">Contactez-nous</h2>
+      <p class="intro__text">
+        Vous avez une question, une suggestion, ou souhaitez contribuer au fansite ? 
+        N'hésitez pas à nous contacter via le formulaire ci-dessous.
+      </p>
+    </section>
+
+    <!-- Formulaire de contact -->
+    <section class="contact">
+      <div class="contact__container">
+        
+        <form class="contact-form" action="#" method="POST" id="contactForm">
+          
+          <!-- Champ Nom -->
+          <div class="form-group">
+            <label for="name" class="form-label">
+              Nom complet <span class="form-required">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              class="form-input" 
+              placeholder="Votre nom et prénom"
+              required
+              aria-required="true"
+            >
+          </div>
+
+          <!-- Champ Email -->
+          <div class="form-group">
+            <label for="email" class="form-label">
+              Email <span class="form-required">*</span>
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="form-input" 
+              placeholder="votre.email@exemple.com"
+              required
+              aria-required="true"
+            >
+          </div>
+
+          <!-- Champ Téléphone (optionnel) -->
+          <div class="form-group">
+            <label for="phone" class="form-label">
+              Téléphone <span class="form-optional">(optionnel)</span>
+            </label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              class="form-input" 
+              placeholder="06 12 34 56 78"
+            >
+          </div>
+
+          <!-- Champ Sujet -->
+          <div class="form-group">
+            <label for="subject" class="form-label">
+              Sujet <span class="form-required">*</span>
+            </label>
+            <select 
+              id="subject" 
+              name="subject" 
+              class="form-select"
+              required
+              aria-required="true"
+            >
+              <option value="">-- Choisissez un sujet --</option>
+              <option value="question">Question générale</option>
+              <option value="suggestion">Suggestion d'amélioration</option>
+              <option value="contribution">Proposition de contribution</option>
+              <option value="erreur">Signaler une erreur</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+
+          <!-- Champ Message -->
+          <div class="form-group">
+            <label for="message" class="form-label">
+              Message <span class="form-required">*</span>
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              class="form-textarea" 
+              rows="6"
+              placeholder="Écrivez votre message ici..."
+              required
+              aria-required="true"
+            ></textarea>
+            <small class="form-hint">Minimum 10 caractères</small>
+          </div>
+
+          <!-- Checkbox Newsletter -->
+          <div class="form-group form-group--checkbox">
+            <label class="form-checkbox">
+              <input 
+                type="checkbox" 
+                id="newsletter" 
+                name="newsletter"
+                class="form-checkbox__input"
+              >
+              <span class="form-checkbox__label">
+                Je souhaite recevoir les actualités du fansite par email
+              </span>
+            </label>
+          </div>
+
+          <!-- RGPD -->
+          <div class="form-group form-group--checkbox">
+            <label class="form-checkbox">
+              <input 
+                type="checkbox" 
+                id="rgpd" 
+                name="rgpd"
+                class="form-checkbox__input"
+                required
+                aria-required="true"
+              >
+              <span class="form-checkbox__label">
+                J'accepte que mes données soient utilisées pour répondre à ma demande 
+                <span class="form-required">*</span>
+              </span>
+            </label>
+            <small class="form-hint">
+              Vos données ne seront jamais partagées avec des tiers. 
+              Consultez notre <a href="#" class="form-link">politique de confidentialité</a>.
+            </small>
+          </div>
+
+          <!-- Boutons -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn--primary">
+              Envoyer le message
+            </button>
+            <button type="reset" class="btn btn--secondary">
+              Réinitialiser
+            </button>
+          </div>
+
+        </form>
+
+        <!-- Informations de contact alternatives -->
+        <aside class="contact-info">
+          <h3 class="contact-info__title">Autres moyens de contact</h3>
+          
+          <div class="contact-info__item">
+            <span class="contact-info__icon">📧</span>
+            <div class="contact-info__content">
+              <strong>Email</strong>
+              <a href="/cdn-cgi/l/email-protection#34575b5a405557407452555a475d405119585b5a535b465d551a575b59"><span class="__cf_email__" data-cfemail="dab9b5b4aebbb9ae9abcbbb4a9b3aebff7b6b5b4bdb5a8b3bbf4b9b5b7">[email&#160;protected]</span></a>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">🐦</span>
+            <div class="contact-info__content">
+              <strong>Twitter</strong>
+              <a href="https://twitter.com/fansite_longoria" target="_blank" rel="noopener">@fansite_longoria</a>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">📱</span>
+            <div class="contact-info__content">
+              <strong>Instagram</strong>
+              <a href="https://instagram.com/fansite_longoria" target="_blank" rel="noopener">@fansite_longoria</a>
+            </div>
+          </div>
+
+          <div class="contact-info__note">
+            <p>
+              <strong>Note :</strong> Ce fansite est indépendant et non affilié à l'Olympique de Marseille. 
+              Pour contacter officiellement le club ou Pablo Longoria, rendez-vous sur 
+              <a href="https://www.om.fr" target="_blank" rel="noopener">om.fr</a>.
+            </p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <p class="footer__text">
+        <a href="../index.html" class="footer__link">Retour à l'accueil principal</a>
+      </p>
+      <p class="footer__copyright">Copyright © 2025 - Fansite HUGO</p>
+    </div>
+  </footer>
+
+  <!-- Script pour le menu burger -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const navToggle = document.querySelector('.nav__toggle');
+    const nav = document.querySelector('.nav');
+    
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isOpen);
+      nav.classList.toggle('nav--open');
+    });
+
+    // Validation simple du formulaire
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const message = document.getElementById('message').value;
+      if (message.length < 10) {
+        alert('Le message doit contenir au moins 10 caractères.');
+        return;
+      }
+      
+      const rgpd = document.getElementById('rgpd').checked;
+      if (!rgpd) {
+        alert('Vous devez

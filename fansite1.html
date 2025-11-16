@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pablo Longoria - Président de l'Olympique de Marseille">
+  <title>Pablo Longoria - OM</title>
+  <link rel="stylesheet" href="css/fansite1.css">
+</head>
+<body class="body--pablo">
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="header__container">
+      <!-- Logo OM -->
+      <a href="fansite1.html" class="header__logo-link" aria-label="Retour à l'accueil">
+        <img src="Image/logo.png" alt="Logo Olympique de Marseille" class="header__logo">
+      </a>
+      
+      <h1 class="header__title">Fansite OM</h1>
+      
+      <!-- Bouton burger pour mobile -->
+      <button class="nav__toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-navigation">
+        <span class="nav__toggle-icon"></span>
+        <span class="nav__toggle-icon"></span>
+        <span class="nav__toggle-icon"></span>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="nav" aria-label="Navigation principale" id="main-navigation">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="fansite1.html" class="nav__link nav__link--active" aria-current="page">Pablo</a>
+          </li>
+          <li class="nav__item">
+            <a href="actualite.html" class="nav__link">Actualité</a>
+          </li>
+          <li class="nav__item">
+            <a href="biographie.html" class="nav__link">Biographie</a>
+          </li>
+          <li class="nav__item">
+            <a href="evenements.html" class="nav__link">Événements</a>
+          </li>
+          <li class="nav__item">
+            <a href="chronologie.html" class="nav__link">Chronologie</a>
+          </li>
+          <li class="nav__item">
+            <a href="videos.html" class="nav__link">Vidéos</a>
+          </li>
+          <li class="nav__item">
+            <a href="contact.html" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SECTION HERO - Image plein écran avec titre -->
+  <section class="hero" role="img" aria-label="Pablo Longoria, Président de l'OM">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h2 class="hero__title">
+        <span class="hero__title-line1">MERCI</span>
+        <span class="hero__title-line2">PABLO</span>
+      </h2>
+    </div>
+  </section>
+
+  <!-- CONTENU PRINCIPAL - Texte biographique -->
+  <main class="main main--pablo" role="main">
+    <article class="bio">
+      <div class="bio__container">
+        
+        <section class="bio__section">
+          <p class="bio__text">
+            Depuis son arrivée à l'Olympique de Marseille en 2020 pour piloter le sportif, puis sa nomination à la présidence le 26 février 2021, Pablo Longoria a remis l'OM sur une trajectoire d'ambition et de modernité. Sa marque de fabrique : une politique de recrutement exigeante, ouverte sur l'Europe et l'Amérique du Sud, un scouting structuré par la data et une obsession de la compétitivité à tous les étages du club. Sous sa conduite, l'OM a retrouvé une place régulière sur la scène européenne et le haut du classement en Ligue 1, avec notamment une 2ᵉ place en 2021-22 et une 3ᵉ place en 2022-23, signes d'un retour durable au premier plan.
+          </p>
+        </section>
+
+        <section class="bio__section">
+          <p class="bio__text">
+            Au-delà des résultats, Longoria a insufflé une culture de la performance et de l'exigence, visible dans la qualité des effectifs bâtis et dans le choix de techniciens à forte identité de jeu. Cette dynamique a culminé au printemps 2024 par un parcours européen mémorable jusqu'en demi-finale de Ligue Europa, redonnant au Vélodrome ses grandes nuits et rappelant l'ADN continental du club.
+          </p>
+        </section>
+
+        <section class="bio__section">
+          <p class="bio__text">
+            Fidèle à l'idée d'un OM populaire et ambitieux, Longoria a aussi renforcé le lien entre le club, sa formation et la ferveur marseillaise, tout en poursuivant la modernisation des structures. Sa capacité à attirer en 2024 un entraîneur de référence internationale comme Roberto De Zerbi a confirmé l'attractivité retrouvée du projet olympien et l'assise d'une vision tournée vers le très haut niveau. L'ère Longoria, c'est la promesse tenue d'un OM à la fois exigeant, audacieux et profondément marseillais.
+          </p>
+        </section>
+
+      </div>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <p class="footer__text">
+        <a href="../index.html" class="footer__link">Retour à l'accueil principal</a>
+      </p>
+      <p class="footer__copyright">Copyright © 2025 - Fansite HUGO</p>
+    </div>
+  </footer>
+
+  <!-- Script pour le menu burger -->
+  <script>
+    const navToggle = document.querySelector('.nav__toggle');
+    const nav = document.querySelector('.nav');
+    
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isOpen);
+      nav.classList.toggle('nav--open');
+    });
+  </script>
+
+</body>
+</html>

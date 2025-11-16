@@ -1,6 +1,6 @@
 /* ============================================
-   CHRONOLOGIE.CSS - Page Chronologie Interactive
-   ============================================ */
+CHRONOLOGIE.CSS - Page Chronologie Interactive
+============================================ */
 
 .main--chrono {
   padding: var(--spacing-lg) 10px;
@@ -180,6 +180,121 @@ li:has(input:checked) {
 .cards:has(li:nth-child(9) > input:checked) { --index: 8; }
 .cards:has(li:nth-child(10) > input:checked) { --index: 9; }
 
+/* Style inline pour garantir que la chronologie fonctionne */
+.timeline {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #2780e3 0%, #ffc107 100%);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+  text-align: left;
+}
+
+.timeline-year {
+  display: inline-block;
+  background: #2780e3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-year:hover {
+  background: #ffc107;
+  color: #333;
+  transform: scale(1.1);
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #2780e3;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.timeline-item.active .timeline-content {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 15px;
+}
+
+.timeline-item.active .timeline-year {
+  background: #ffc107;
+  color: #333;
+}
+
+.timeline-content h3 {
+  color: #2780e3;
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+}
+
+.timeline-content p {
+  margin: 10px 0;
+  line-height: 1.7;
+  color: #333;
+}
+
+.timeline-content strong {
+  color: #2780e3;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 4px solid #2780e3;
+  border-radius: 50%;
+  z-index: 3;
+  transition: all 0.3s;
+}
+
+.timeline-item.active .timeline-dot {
+  background: #ffc107;
+  border-color: #ffc107;
+  transform: translateX(-50%) scale(1.3);
+}
+
 /* 📱💻 RESPONSIVE CHRONOLOGIE - TABLETTES & DESKTOP (≥ 768px) */
 @media (min-width: 768px) {
   .cards-container {
@@ -189,6 +304,23 @@ li:has(input:checked) {
     --label-line-h-current: 3rem;
     --title-top: 3rem;
     --info-top: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 50px;
+    padding-right: 10px;
+    text-align: left;
+  }
+  
+  .timeline-dot {
+    left: 20px;
   }
 }
 

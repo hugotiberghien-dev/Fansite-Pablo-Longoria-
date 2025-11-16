@@ -3,12 +3,6 @@
    (Actualités, Biographie détaillée)
    ============================================ */
 
-/* 🎯 CONTENU PRINCIPAL */
-.main {
-  padding: var(--spacing-lg);
-  min-height: 60vh;
-}
-
 /* Sections génériques */
 .intro, .news {
   margin-bottom: var(--spacing-lg);
